@@ -29,12 +29,24 @@
 	}
 	add_action('init', 'Tdc_Dco_Theme_Setup');
 	
+	// initjquery
+	wp_register_script( 'initJquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array( 'jquery' ), '', TRUE );
+	wp_enqueue_script( 'initJquery' );
+	 
+	// functions jquery
+	wp_register_script( 'func_js', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '', TRUE );
+	wp_enqueue_script( 'func_js' );
+	 
+	// simpel slider jquery
+	wp_register_script( 'simpSlid_js', get_template_directory_uri() . '/js/simple-slider.js', array( 'jquery' ), '', TRUE );
+	wp_enqueue_script( 'simpSlid_js' );
+	 
 	// custom jquery
-	wp_register_script( 'custom_js', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery' ), '1.0', TRUE );
+	wp_register_script( 'custom_js', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery' ), '', TRUE );
 	wp_enqueue_script( 'custom_js' );
 	 
 	// validation
-	wp_register_script( 'validation', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js', array( 'jquery' ) );
+	wp_register_script( 'validation', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js', array( 'jquery' ), '', TRUE );
 	wp_enqueue_script( 'validation' );
 	
 	function my_pre_save_post( $post_id ) {

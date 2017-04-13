@@ -15,9 +15,6 @@
     </footer>
 
 
-    <script src="<?php bloginfo('template_url');?>/js/jquery-2.1.4.min.js"></script>
-    <script src="<?php bloginfo('template_url');?>/js/functions.js" type="text/javascript"> </script>
-    <script src="<?php bloginfo('template_url');?>/js/simple-slider.js" type="text/javascript"> </script>
 	<?php wp_footer(); ?>
 
   </body>
