@@ -8,7 +8,7 @@
 
         <div class="footer-secondary-links">
           <ul>
-            <li><a href="javascript:void(0)">&copy; <?php echo date('Y');?> Hogeran</a></li>
+            <li><a href="javascript:void(0)">&copy; <?php echo date('Y');?> Tele2</a></li>
           </ul>
 
         </div>

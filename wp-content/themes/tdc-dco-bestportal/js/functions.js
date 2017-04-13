@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	var sightPref = "/best"
+	var sightPref = document.location.origin;
 	$('#cpu-slider').change(function() {
         $('#cpu-output').html('<b>CPU: ' + $(this).val() + ' core</b>');
     });
