@@ -214,6 +214,7 @@ function tdcInfoxBest_custom_post_types()
         'hierarchical' => false,
 		'has_archive'  => true,
         'menu_position' => 25,
+		'show_in_rest' => true,
         'supports' => array( 'title','author','revisions' ),
     );
     register_post_type( 'case' , $args );
