@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	var sightPref = document.location.origin;
+	var sightPref = window.location.href;
 	$('#cpu-slider').change(function() {
         $('#cpu-output').html('<b>CPU: ' + $(this).val() + ' core</b>');
     });
