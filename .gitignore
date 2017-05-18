@@ -105,3 +105,4 @@ Thumbs.db
 # add your own entries here
 !wp-content/plugins/tdc-skapa-bestallning/
 !wp-content/themes/tdc-dco-bestportal/
+!wp-content/languages/plugins/
