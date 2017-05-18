@@ -420,8 +420,8 @@ if ( isset( $_POST['order'] ) ) {
 				<input type="hidden" name="servernamn" id="submitted" value="<?php echo $servernamn; ?>" >
 				<input type="hidden" name="parentid" id="submitted" value="<?php echo $parentid; ?>" >
 				<fieldset>
-					<label for="tekniker"><?php _e('Mottagande tekniker:</br>Mailadress till tekniker som ska fortsätta med serven när DCO är klara</br> (Måste vara en tdc-adress) *:', 'framework') ?></label>
-					<input value="" type="email" name="tekniker" id="tekniker" class="required" pattern="[a-z0-9._%+-]+@tdc.se$" required />
+					<label for="tekniker"><?php _e('Mottagande tekniker:</br>Mailadress till tekniker som ska fortsätta med serven när DCO är klara</br> (Måste vara en tdc- eller tele2-adress) *:', 'framework') ?></label>
+					<input value="" type="email" name="tekniker" id="tekniker" class="required" pattern="[a-z0-9._%+-]+@(tdc.se|tele2.com)$" required />
 				</fieldset>
 			 
 				<fieldset>
