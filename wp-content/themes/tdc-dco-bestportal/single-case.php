@@ -115,13 +115,16 @@
 				<?php if(get_field('casetyp') == 'Ny' or get_field('casetyp') == 'server'){ ?>
 					<button type="submit" form="delorder-server" name='submittype' value="server"><?php _e('Serverinstallation', 'framework') ?></button>
 				<?php } ?>
-				<?php if(get_field('casetyp') == 'Ny' or get_field('casetyp') == 'nod'){ ?>
-					<button type="submit" form="delorder-server" name='submittype' value="nod"><?php _e('Nod i visionapp', 'framework') ?></button>
-				<?php } ?>
-<!--
-				<button type="submit" form="delorder-server" name='submittype' value="backup"><?php _e('Backupserver / NAS', 'framework') ?></button>
--->
 			</form>
+			<?php if(get_field('casetyp') == 'Ny' or get_field('casetyp') == 'nod'){ ?>
+<!--
+				<button type="submit" form="delorder-server" name='submittype' value="nod"><?php _e('Nod i visionapp', 'framework') ?></button>
+-->
+				<button id="skapaNyNod">Nod i visionapp</button>
+			<?php } ?>
+<!--
+			<button type="submit" form="delorder-server" name='submittype' value="backup"><?php _e('Backupserver / NAS', 'framework') ?></button>
+-->
 			</br>
 <!--			<form action="/best/delorder/" id="delorder-nodvisionapp" method="post">
 			 

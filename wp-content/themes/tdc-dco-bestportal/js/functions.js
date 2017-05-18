@@ -24,6 +24,12 @@ $( document ).ready(function() {
 		window.location.assign( sightPref + "/skapa-bestallning/" );
 		//window.location.href = "/best/skapa-bestallning/";
 	});
+	$( "#skapaNyNod" ).click(function() {
+		var ordernr=$("#nyorder").val();
+		window.location.assign( sightPref + "/lagg-till-ny-nod-i-visionapp/" );
+		//window.location.href = "/best/skapa-bestallning/";
+	});
+
 	
 //Hämta info från sida
 	$('#setOrdernummer').is(function() {
