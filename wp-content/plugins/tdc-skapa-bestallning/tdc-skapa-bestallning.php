@@ -4,7 +4,7 @@ Plugin Name: TDC skapa best&auml;llning
 Plugin URI: http://hogeran.se
 Description: TDC skapa best&auml;llning via Contact Form 7
 Author: Hogeran
-Version: 0.1
+Version: 0.5.1
 Author URI: http://hogeran.se
 */
  
