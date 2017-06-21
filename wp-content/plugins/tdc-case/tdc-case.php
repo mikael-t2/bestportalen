@@ -55,18 +55,20 @@ function tdc_case_setup_post_types() {
  
     // Custom Post Type Supports
     $args = array(
-        'labels' => $labels,
-        'public' => true,
+        'labels' 			=> $labels,
+        'public' 			=> true,
         'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'can_export' => true,
-        'rewrite' => array( 'slug' => 'case', 'with_front' => true ),
-        'capability_type' => 'post',
-        'hierarchical' => false,
-		'has_archive'  => true,
-        'menu_position' => 25,
-        'supports' => $supports,
+        'show_ui' 			=> true,
+        'query_var' 		=> true,
+        'can_export' 		=> true,
+        'rewrite' 			=> array( 'slug' => 'case', 'with_front' => true ),
+        'capability_type' 	=> 'post',
+        'hierarchical' 		=> false,
+		'has_archive'  		=> true,
+        'menu_position' 	=> 25,
+        'supports' 			=> $supports,
+  		'show_in_rest'      => true,
+  		'rest_base'         => 'case',
         'menu_icon' => TDC_CUST_PLUGIN_URL . '/includes/images/Kunds_icon.png', // you can set your own icon here
     );
  
