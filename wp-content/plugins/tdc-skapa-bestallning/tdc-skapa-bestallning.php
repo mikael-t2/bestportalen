@@ -54,6 +54,8 @@ function tdcInfoxBest_custom_post_types()
 		'rewrite' => array( 'slug' => 'delorder','with_front' => true,'feeds' => false,'pages' => true ),
 		'query_var' => true,
 		'can_export' => true,
+  		'show_in_rest'      => true,
+  		'rest_base'         => 'delorder',
 		'supports' => array( 'title','editor','author','revisions' ),
 	);
 	register_post_type( 'delorder', $args );
