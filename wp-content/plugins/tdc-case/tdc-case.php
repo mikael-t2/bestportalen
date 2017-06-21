@@ -3,7 +3,7 @@
 Plugin Name: TDC Case
 Plugin URL: http://hogeran.se/
 Description: L&auml;gger till Beställninngsfunktion i databasen
-Version: 0.5.1
+Version: 0.6.1
 Author: Mikael Holgersson
 Author URI: http://hogeran.se/
 */
