@@ -46,6 +46,7 @@ if ( isset( $_GET['nystatus'] ) ) {
 };
 $bestallare = get_user_by( 'login', get_field('bestallare', get_field('parentid')) );
 $bestallare_mail = $bestallare->user_email;
+$userrole = array_shift($current_user->roles);
 
 ?>
 
@@ -102,7 +103,12 @@ $bestallare_mail = $bestallare->user_email;
 			</div>
 			
 			<?php if (get_field('sight_id' , $serverid) != 'Saknas'){ ?>
-				<h1 class="flex-title"><br>Sight-specifik information.</h1>
+
+				<h1 class="flex-title"><br>Sight-specifik information.
+					<?php if ($userrole == 'administrator') {?>
+						<a href="?nystatus=<?php echo $status?>&statusid=<?php echo get_the_ID();?>"><?php echo $status ?></a>
+					<?php };?>
+				</h1>
 			<div class="divTable">
 				<div class="divRow">
 					<div class="divCell50"><strong>Adress:</strong></div>
@@ -205,7 +211,6 @@ $bestallare_mail = $bestallare->user_email;
 			</form>
 			</br>
 			<?php
-				$userrole = array_shift($current_user->roles);
 				if ($userrole == 'administrator') {?>
 					<fieldset>
 						<h1 class="flex-title">Ändra status:</h1>
