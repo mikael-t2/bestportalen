@@ -4,7 +4,7 @@ Plugin Name: TDC skapa best&auml;llning
 Plugin URI: http://hogeran.se
 Description: TDC skapa best&auml;llning via Contact Form 7
 Author: Hogeran
-Version: 0.6.1
+Version: 0.6.2
 Author URI: http://hogeran.se
 */
  
@@ -245,11 +245,10 @@ function tdc_wpcf7_skapaBestallning( $contact_form ) {
     	$posted_data = $submission->get_posted_data();
 		if ( 'nyBest' == $title ) {
 			
-			
-			$current_user = wp_get_current_user();
 			$order = $posted_data['ordernummer'];
 			$kund = $posted_data['kund'];
 			$avtalstyp = $posted_data['avtalstyp'];
+			$bestallare = $posted_data['user_name'];
 				
 			/* Put your code here to manipulate the data - simples ?? */
 			$output = $order . " " . $kund . " " . $avtalstyp;
@@ -268,7 +267,7 @@ function tdc_wpcf7_skapaBestallning( $contact_form ) {
 			$post_id = wp_insert_post( $post_information );
 			update_field('field_566812f6b00ef', wp_strip_all_tags( $kund ), $post_id);
 			update_field('field_56681383b00f1', wp_strip_all_tags( $order ), $post_id);
-			update_field('field_56681352b00f0', wp_strip_all_tags( $current_user->user_login ), $post_id);
+			update_field('field_56681352b00f0', wp_strip_all_tags( $bestallare ), $post_id);
 			update_field('field_5673c23e1c0b3', wp_strip_all_tags( $avtalstyp ), $post_id);
 			update_field('field_56d99b7e287d1', 'Ny', $post_id);
 			update_field('field_56e28b76ffef3', 'Ny', $post_id);
