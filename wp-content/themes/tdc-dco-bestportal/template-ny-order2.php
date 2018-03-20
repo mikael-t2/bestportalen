@@ -22,7 +22,7 @@
 			<h3>Info om avtal</h3>
 			<fieldset>
 				<h1 class="flex-title">KST</h1>
-				<p>TDC-ägd Hårdvara + Licenser</p>
+				<p>Tele2-ägd Hårdvara + Licenser</p>
 				<p>(Övervakning, antivirus, backup, Drift)</p>
 			</fieldset>
 		 
